@@ -57,6 +57,7 @@ class RoomController extends Controller
 			$dan["roommate"]=$json;
 			$find=DB::table('board')->select('name','date','content')->where('room',$room)->get()->toArray();
 			$count=0;
+			$comment=Array(Array());
 			foreach($find as $ob)
 			{
 				$comment[$count]["name"]=$ob->name;
