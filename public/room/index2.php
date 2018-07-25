@@ -220,8 +220,9 @@
         })
     });
     //留言提交
-    let stu_content = $("#stu-content").val();
+
     $(".send span").click(function () {
+        let stu_content = $("#stu-content").val();
         $.ajax({
             url: "/action/comment_submit",
             type: "post",
