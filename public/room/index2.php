@@ -148,7 +148,6 @@
     </div>
 </div>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-<script src="https://vuejs.org/js/vue.js"></script>
 <script src="room/search.js"></script>
 <script>
     //提交查室友数据
