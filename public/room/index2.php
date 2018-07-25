@@ -193,7 +193,7 @@
                         peopleGen(obj);
                     });
                     let dataObj2 = eval(data.comment);
-                    if (dataObj2)
+                    if (dataObj2[0])
                         $.each(dataObj2, function (index, obj) {
                             commentGen(obj['name'], obj['date'], obj['content']);
                         });
