@@ -189,13 +189,16 @@
                 document.querySelector(".message-detail").innerHTML="";
                 if (data.status) {
                     let dataObj1 = eval(data.roommate);
-                    $.each(dataObj, function (index,obj) {
+                    $.each(dataObj1, function (index,obj) {
                         peopleGen(obj['name']);
                     });
                     let dataObj2 = eval(data.comment);
                     $.each(dataObj2, function (index,obj) {
                         commentGen(obj['name'],obj['date'],obj['content']);
                     })
+                }
+                else{
+                    alert("没有找到数据，请检查您的输入是否正确")
                 }
             },
             error:function () {
