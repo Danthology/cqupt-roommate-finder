@@ -216,18 +216,20 @@
     });
     //留言提交
     let stu_content = $("#stu-content").val();
-    $.ajax({
-        url: "/action/comment_submit",
-        type: "post",
-        dataType: "json",
-        data: {"name": stu_name, "num": stu_num, "content": stu_content},
-        success:function(data){
-            console.log(data);
-        },
-        error:function () {
-            alert("连接失败")
-        }
-    })
+    $(".send span").click(function () {
+        $.ajax({
+            url: "/action/comment_submit",
+            type: "post",
+            dataType: "json",
+            data: {"name": stu_name, "num": stu_num, "content": stu_content},
+            success:function(data){
+                console.log(data);
+            },
+            error:function () {
+                alert("连接失败")
+            }
+        })
+    });
 </script>
 </body>
 </html>
