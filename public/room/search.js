@@ -15,3 +15,4 @@ inWidth();
  if(document.getElementsByClassName('message1').length===0){
      $('.kong').show(600);
  }
+
