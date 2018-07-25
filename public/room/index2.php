@@ -152,6 +152,11 @@
 <script src="room/search.js"></script>
 <script>
     //提交查室友数据
+    $.ajaxSetup({
+        headers:{
+            'X-CSRF-TOKEN': "<?php echo csrf_token()?>"
+        }
+    });
     let stu_name = "";
     let stu_num = "";
     let peopleGen = function (name) {
