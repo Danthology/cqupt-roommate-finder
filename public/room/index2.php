@@ -153,7 +153,7 @@
 <script>
     //提交查室友数据
     $.ajaxSetup({
-        headers:{
+        headers: {
             'X-CSRF-TOKEN': "<?php echo csrf_token()?>"
         }
     });
@@ -178,7 +178,7 @@
             "                        </div>\n" +
             "                        <div class=\"bo-b\"></div>\n" +
             "                    </div>";
-        $(".message-detail").append(commentTemplate);
+        $(".message-detail").prepend(commentTemplate);
     };
     $(".card-bottom button").click(function () {
         stu_name = $(".name input").val();
@@ -219,7 +219,23 @@
             }
         })
     });
+
     //留言提交
+
+    function format(Date) {
+        var Y = Date.getFullYear();
+        var M = Date.getMonth() + 1;
+        M = M < 10 ? '0' + M : M;// 不够两位补充0
+        var D = Date.getDate();
+        D = D < 10 ? '0' + D : D;
+        var H = Date.getHours();
+        H = H < 10 ? '0' + H : H;
+        var Mi = Date.getMinutes();
+        Mi = Mi < 10 ? '0' + Mi : Mi;
+        var S = Date.getSeconds();
+        S = S < 10 ? '0' + S : S;
+        return Y + '-' + M + '-' + D + ' ' + H + ':' + Mi + ':' + S;
+    }
 
     $(".send span").click(function () {
         let stu_content = $("#stu-content").val();
@@ -228,10 +244,15 @@
             type: "post",
             dataType: "json",
             data: {"name": stu_name, "num": stu_num, "content": stu_content},
-            success:function(data){
-                console.log(data);
+            success: function (data) {
+                if (data.status === true) {
+                    let data = new Date();
+                    commentGen(stu_name, format(data), stu_content)
+                } else {
+                    alert("留言失败，卒")
+                }
             },
-            error:function () {
+            error: function () {
                 alert("连接失败")
             }
         })
