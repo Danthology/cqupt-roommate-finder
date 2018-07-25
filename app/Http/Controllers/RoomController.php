@@ -11,14 +11,14 @@ use Cache;
 class RoomController extends Controller
 {
     public function room()
-	{
-		$name=Input::post('name');
-	    $num=Input::post('num');
+	  {
+		$name=request()->json('name');
+	  $num=request()->json('num');
 		if(Cache::has($num))
 		{
 			$room=Cache::get($num);
 		}
-	    else
+	  else
 		{
 			$ob=DB::table('room')->where('num',$num)->where('name',$name)->first();
 			if($ob)
@@ -63,7 +63,7 @@ class RoomController extends Controller
 				$comment[$count]["name"]=$ob->name;
 				$comment[$count]["date"]=$ob->date;
 				$comment[$count]["content"]=$ob->content;
-                $count++;
+        $count++;
 			}
 			$dan["comment"]=$comment;
 			//dd($dan);
@@ -79,7 +79,7 @@ class RoomController extends Controller
 	public function word()
 	{
 		$name=Input::post('name');
-	    $num=Input::post('num');
+	  $num=Input::post('num');
 		$content=Input::post('content');
 		$ob=DB::table('room')->where('num',$num)->first();
 		$status=DB::table('board')->insert(['name'=>$name,'room'=>$ob,'content'=>$content]);
