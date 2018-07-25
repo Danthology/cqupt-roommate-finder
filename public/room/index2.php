@@ -193,12 +193,12 @@
                         peopleGen(obj);
                     });
                     let dataObj2 = eval(data.comment);
-                    if (dataObj2[0].length)
+                    if (data.count)
                         $.each(dataObj2, function (index, obj) {
                             commentGen(obj['name'], obj['date'], obj['content']);
                         });
                     else
-                        $(".message-detail").append("留下你想对未来室友说的话吧~");
+                        $(".message-detail").append("<p>留下你想对未来室友说的话吧~</p>");
                 }
                 else {
                     alert("没有找到数据，请检查您的输入是否正确")
