@@ -7,7 +7,7 @@ img { border:none;}
 #container{
     width:100%;
     /*height:25rem;*/
-    background-image: url("img/back.png");
+    background-image: url("	https://chen-1256566109.cos.ap-chengdu.myqcloud.com/back.png?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKID9VkPxRUWFBiuHq9VkR2hnbQcN3PMsBtL%26q-sign-time%3D1532482247%3B1532484047%26q-key-time%3D1532482247%3B1532484047%26q-header-list%3D%26q-url-param-list%3D%26q-signature%3D229f3a15340d49ac87f4c48982fc2b6b1cddbc8c&token=fbb275af6250ce7a3d44b94da872a5dca39050a510001&clientIP=113.251.221.152&clientUA=57e40077-75e9-413d-8010-bfa51c59bb72");
     background-size:100% 100%;
     position:relative;
     /*display:flex;*/
@@ -17,7 +17,7 @@ img { border:none;}
 #header{
     width:100%;
     height:8rem;
-    background-image: url("img/header.png");
+    background-image: url("https://chen-1256566109.cos.ap-chengdu.myqcloud.com/header.png?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDzeu94mzEvhodmoRX0Hil6YlhxUTLh0uS%26q-sign-time%3D1532482285%3B1532484085%26q-key-time%3D1532482285%3B1532484085%26q-header-list%3D%26q-url-param-list%3D%26q-signature%3Dc8fe5da756aa2cffaa442477ab569ce7ac63a746&token=9b1bb8f3b5dded1182ee2366e5492c99cb6f747e10001&clientIP=113.251.221.152&clientUA=b9600f17-69db-4515-be0e-2e1a00f0447f ");
     background-size:100% 100%;
     box-shadow: 0 0.1rem 0.6rem #5f8ca0;
     display: flex;
@@ -68,7 +68,7 @@ img { border:none;}
     bottom: 0;
     margin: 1rem auto;
     box-shadow:0.05rem 0.05rem 0.1rem #4a7588;
-    background-image: url("img/card.png");
+    background-image: url("https://chen-1256566109.cos.ap-chengdu.myqcloud.com/card.png?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKID44jzwGBoJXcct65Mf7HtM6SwOpTOJJvF%26q-sign-time%3D1532482270%3B1532484070%26q-key-time%3D1532482270%3B1532484070%26q-header-list%3D%26q-url-param-list%3D%26q-signature%3Df3103447fc801e6c10dadce582ffd020c868e875&token=7d345ddf2e536d705b61207356717525e85ecf8b10001&clientIP=113.251.221.152&clientUA=1d786a9d-c666-4a5c-a34e-44d8b2525529 ");
     background-size: 100% 100%;
     display:flex;
     flex-direction: column;
