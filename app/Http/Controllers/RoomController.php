@@ -80,11 +80,11 @@ class RoomController extends Controller
 	}
 	public function word()
 	{
-		$name=Input::post('name');
-	  $num=Input::post('num');
-		$content=Input::post('content');
+		$name=request()->input('name');
+	  $num=request()->input('num');
+		$content=request()->input('content');
 		$ob=DB::table('room')->where('num',$num)->first();
-		$status=DB::table('board')->insert(['name'=>$name,'room'=>$ob,'content'=>$content]);
+		$status=DB::table('board')->insert(['name'=>$name,'room'=>$ob->room,'content'=>$content]);
 		$dan['status']=$status;
 		return response()->json($dan);
 	}
