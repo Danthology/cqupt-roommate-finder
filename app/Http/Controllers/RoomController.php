@@ -68,6 +68,7 @@ class RoomController extends Controller
 			$dan["comment"]=$comment;
 			//dd($dan);
 			$dan["room"]=$room;
+			$dam["count"]=$count;
 			return response()->json($dan);
 		}
 		else
