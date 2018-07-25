@@ -216,7 +216,7 @@ img { border:none;}
 }
 
 .send{
-    width:3rem;
+    width:4rem;
     height:0.75rem;
     border-radius:0.2rem 0.5rem 0.5rem 0.2rem;
     background-color:#fff;
@@ -294,6 +294,11 @@ img { border:none;}
     background-size:100% 100%;
     margin-left:3rem;
     display:none;
+}
+
+#stu-content{
+    border: 0 none;
+    width: 80%;
 }
 
 

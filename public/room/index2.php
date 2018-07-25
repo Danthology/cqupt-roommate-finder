@@ -66,7 +66,7 @@
                         <span>宿舍留言板</span>
                     </div>
                     <div class="send">
-                        <p>给室友留言 | 发送</p>
+                        <input id="stu-content" placeholder="输入留言"><span>发送</span>
                     </div>
                 </div>
 
@@ -151,12 +151,9 @@
 <script src="https://vuejs.org/js/vue.js"></script>
 <script src="room/search.js"></script>
 <script>
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': "<?php echo csrf_token()?>"
-        }
-    });
     //提交查室友数据
+    let stu_name = "";
+    let stu_num = "";
     let peopleGen = function (name) {
         let peopleTemplate = "                    <div class=\"xxx\">\n" +
             "                        <div class=\"xxx-name\"><span>" + name + "</span></div>\n" +
@@ -179,14 +176,22 @@
         $(".message-detail").append(commentTemplate);
     };
     $(".card-bottom button").click(function () {
+        stu_name = $(".name input").val();
+        stu_num = $(".num input").val();
         $.ajax({
             url: "/action/info_submit",
             type: "post",
             dataType: "json",
-            data: {"name": $(".name input").val(), num: $(".num input").val()},
+            data: {"name": stu_name, "num": stu_num},
             success: function (data) {
                 document.querySelector(".result-people").innerHTML = "";
                 document.querySelector(".message-detail").innerHTML = "";
+                let patternArea = new RegExp("[\u4e00-\u9fa5]{3}");
+                let patternBuilding = new RegExp("[0-9]+[\u4e00-\u9fa5]{1}");
+                let patternDorm = new RegExp("[0-9]{3}-*[0-9]*");
+                $("#yuan").html(patternArea.exec(data.room));
+                $("#she").html(patternBuilding.exec(data.room));
+                $("#hao").html(patternDorm.exec(data.room));
                 if (data.status) {
                     let dataObj1 = eval(data.roommate);
                     $.each(dataObj1, function (index, obj) {
@@ -209,6 +214,20 @@
             }
         })
     });
+    //留言提交
+    let stu_content = $("#stu-content").val();
+    $.ajax({
+        url: "/action/comment_submit",
+        type: "post",
+        dataType: "json",
+        data: {"name": stu_name, "num": stu_num, "content": stu_content},
+        success:function(data){
+            console.log(data);
+        },
+        error:function () {
+            alert("连接失败")
+        }
+    })
 </script>
 </body>
 </html>
