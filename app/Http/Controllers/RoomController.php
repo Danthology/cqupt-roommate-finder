@@ -12,8 +12,8 @@ class RoomController extends Controller
 {
     public function room()
 	  {
-		$name=request()->json('name');
-	  $num=request()->json('num');
+		$name=request()->input('name');
+	    $num=request()->input('num');
 		if(Cache::has($num))
 		{
 			$room=Cache::get($num);
@@ -67,6 +67,7 @@ class RoomController extends Controller
 			}
 			$dan["comment"]=$comment;
 			//dd($dan);
+			$dan["room"]=$room;
 			return response()->json($dan);
 		}
 		else
