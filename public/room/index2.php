@@ -22,7 +22,7 @@
         </div>
     </div>
     <div id="main">
-        <form action="/action/info_submit" method="post" class="card card-display">
+        <form class="card card-display">
             <?php echo csrf_field(); ?>
             <div class="name"><input type="text" value="请输入你的姓名" onclick="this.value=''" name="name"></div>
             <div class="num"><input type="text" value="请输入你的学号" onclick="this.value=''" name="num"></div>
@@ -153,7 +153,7 @@
 <script>
     $.ajaxSetup({
         headers: {
-            'X-CSRF-TOKEN': <?php echo csrf_token()?>
+            'X-CSRF-TOKEN': "<?php echo csrf_token()?>"
         }
     });
     //提交查室友数据
@@ -183,7 +183,7 @@
             url: "/action/info_submit",
             type: "post",
             dataType: "json",
-            data: {"name": $(".name input"), num: $(".num input")}
+            data: {"name": $(".name input").val(), num: $(".num input").val()},
             success: function (data) {
                 document.querySelector(".result-people").innerHTML="";
                 document.querySelector(".message-detail").innerHTML="";
@@ -197,6 +197,9 @@
                         commentGen(obj['name'],obj['date'],obj['content']);
                     })
                 }
+            },
+            error:function () {
+                alert("连接失败");
             }
         })
     });
