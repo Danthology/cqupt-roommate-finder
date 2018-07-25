@@ -157,21 +157,21 @@
         }
     });
     //提交查室友数据
-    let peopleGen=function(name){
-        let peopleTemplate="                    <div class=\"xxx\">\n" +
-            "                        <div class=\"xxx-name\"><span>"+name+"</span></div>\n" +
+    let peopleGen = function (name) {
+        let peopleTemplate = "                    <div class=\"xxx\">\n" +
+            "                        <div class=\"xxx-name\"><span>" + name + "</span></div>\n" +
             "                        <div class=\"bo\"></div>\n" +
             "                    </div>";
         $(".result-people").append(peopleTemplate);
     };
-    let commentGen=function(name,date,content){
-        let commentTemplate="                    <div class=\"message1\">\n" +
+    let commentGen = function (name, date, content) {
+        let commentTemplate = "                    <div class=\"message1\">\n" +
             "                        <div class=\"word\">\n" +
             "                            <div class=\"word1\">\n" +
-            "                                <p>"+content+"</p>\n" +
+            "                                <p>" + content + "</p>\n" +
             "                            </div>\n" +
             "                            <div class=\"word2\">\n" +
-            "                                <p>——"+name+" "+date+"</p>\n" +
+            "                                <p>——" + name + " " + date + "</p>\n" +
             "                            </div>\n" +
             "                        </div>\n" +
             "                        <div class=\"bo-b\"></div>\n" +
@@ -185,23 +185,26 @@
             dataType: "json",
             data: {"name": $(".name input").val(), num: $(".num input").val()},
             success: function (data) {
-                document.querySelector(".result-people").innerHTML="";
-                document.querySelector(".message-detail").innerHTML="";
+                document.querySelector(".result-people").innerHTML = "";
+                document.querySelector(".message-detail").innerHTML = "";
                 if (data.status) {
                     let dataObj1 = eval(data.roommate);
-                    $.each(dataObj1, function (index,obj) {
-                        peopleGen(obj['name']);
+                    $.each(dataObj1, function (index, obj) {
+                        peopleGen(obj);
                     });
                     let dataObj2 = eval(data.comment);
-                    $.each(dataObj2, function (index,obj) {
-                        commentGen(obj['name'],obj['date'],obj['content']);
-                    })
+                    if (dataObj2)
+                        $.each(dataObj2, function (index, obj) {
+                            commentGen(obj['name'], obj['date'], obj['content']);
+                        });
+                    else
+                        $(".message-detail").append("留下你想对未来室友说的话吧~");
                 }
-                else{
+                else {
                     alert("没有找到数据，请检查您的输入是否正确")
                 }
             },
-            error:function () {
+            error: function () {
                 alert("连接失败");
             }
         })
