@@ -83,10 +83,8 @@ $(".card-bottom button").click(function () {
                     }
                 },
                 error: function (data) {
-                    if (data.message === "Too Many Attempts.")
-                        alert("查询过于频繁，请稍后再试");
-                    else
-                        alert("连接失败");
+                    console.log(data);
+                    alert("连接失败");
                 }
             })
         }
@@ -132,10 +130,8 @@ $(".send span").click(function () {
                 }
             },
             error: function (data) {
-                if (data.message === "Too Many Attempts.")
-                    alert("留言过于频繁，请稍后再试");
-                else
-                    alert("连接服务器错误")
+                console.log(data);
+                alert("连接服务器错误")
             }
         });
     else
