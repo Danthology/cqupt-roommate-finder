@@ -43,8 +43,8 @@ function isVaildName(str) {
 $(".card-bottom button").click(function () {
     stu_name = $(".name input").val();
     stu_num = $(".num input").val();
-    if (stu_num&& stu_name){
-        if (isVaildName(stu_name) && isValidNum(stu_num)){
+    if (stu_num && stu_name) {
+        if (isVaildName(stu_name) && isValidNum(stu_num)) {
             $.ajax({
                 url: "/action/info_submit",
                 type: "post",
@@ -82,23 +82,24 @@ $(".card-bottom button").click(function () {
                         alert("没有找到数据，请检查您的输入是否正确")
                     }
                 },
-                error: function () {
-                    alert("连接失败");
+                error: function (data) {
+                    if (data.message === "Too Many Attempts.")
+                        alert("查询过于频繁，请稍后再试");
+                    else
+                        alert("连接失败");
                 }
             })
         }
         else {
             alert("请正确输入学号和姓名");
         }
-    }else{
+    } else {
         alert("请输入信息");
     }
-
-
-
 });
 
 //留言提交
+//日期格式化
 function format(Date) {
     var Y = Date.getFullYear();
     var M = Date.getMonth() + 1;
@@ -116,21 +117,27 @@ function format(Date) {
 
 $(".send span").click(function () {
     let stu_content = $("#stu-content").val();
-    $.ajax({
-        url: "/action/comment_submit",
-        type: "post",
-        dataType: "json",
-        data: {"name": stu_name, "num": stu_num, "content": stu_content},
-        success: function (data) {
-            if (data.status === true) {
-                let data = new Date();
-                commentGen(stu_name, format(data), stu_content)
-            } else {
-                alert("留言失败，卒")
+    if (stu_content)
+        $.ajax({
+            url: "/action/comment_submit",
+            type: "post",
+            dataType: "json",
+            data: {"name": stu_name, "num": stu_num, "content": stu_content},
+            success: function (data) {
+                if (data.status === true) {
+                    let data = new Date();
+                    commentGen(stu_name, format(data), stu_content)
+                } else {
+                    alert("留言失败，卒")
+                }
+            },
+            error: function (data) {
+                if (data.message === "Too Many Attempts.")
+                    alert("留言过于频繁，请稍后再试");
+                else
+                    alert("连接服务器错误")
             }
-        },
-        error: function () {
-            alert("连接失败")
-        }
-    })
+        });
+    else
+        alert("请输入留言内容");
 });
