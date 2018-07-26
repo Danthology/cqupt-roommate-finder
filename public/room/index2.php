@@ -23,9 +23,8 @@
     </div>
     <div id="main">
         <form class="card card-display">
-            <?php echo csrf_field(); ?>
-            <div class="name"><input type="text" value="请输入你的姓名" onclick="this.value=''" name="name"></div>
-            <div class="num"><input type="text" value="请输入你的学号" onclick="this.value=''" name="num"></div>
+            <div class="name"><input type="text" placeholder="请输入你的姓名" onfocus="this.placeholder=''" onblur="this.placeholder='请输入你的姓名'" name="name"></div>
+            <div class="num"><input type="text" placeholder="请输入你的学号(10位)" onfocus="this.placeholder=''" onblur="this.placeholder='请输入你的学号(10位)'" name="num"></div>
             <div class="card-bottom">
                 <button type="button">查询</button>
             </div>
@@ -35,26 +34,14 @@
                 <div class="result-title2">
                     <div class="result-img2"></div>
                     <div class="result-title-p2">
-                        <span id="yuan">知行苑</span>
-                        <span id="she">6舍</span>
-                        <span id="hao">123</span>
+                        <span id="yuan">....苑</span>
+                        <span id="she">.舍</span>
+                        <span id="hao">...</span>
                     </div>
                 </div>
                 <div class="result-people">
                     <div class="xxx">
-                        <div class="xxx-name"><span>哈</span></div>
-                        <div class="bo"></div>
-                    </div>
-                    <div class="xxx">
-                        <div class="xxx-name"><span>哈哈</span></div>
-                        <div class="bo"></div>
-                    </div>
-                    <div class="xxx">
-                        <div class="xxx-name"><span>哈哈哈</span></div>
-                        <div class="bo"></div>
-                    </div>
-                    <div class="xxx">
-                        <div class="xxx-name"><span>哈哈哈哈</span></div>
+                        <div class="xxx-name"><span>.......</span></div>
                         <div class="bo"></div>
                     </div>
                 </div>
@@ -73,13 +60,10 @@
                     <div class="message1">
                         <div class="word">
                             <div class="word1">
-                                <p>
-                                    你们好，我的QQ号是15742436843，看到请加我一起玩啊！
-                                    你们好，我的QQ号是15742436843，看到请加我一起玩啊
-                                </p>
+                                <p>...</p>
                             </div>
                             <div class="word2">
-                                <p>——木子清 7-29 22:40</p>
+                                <p>——..... ...-... ...:...</p>
                             </div>
                         </div>
                         <div class="bo-b"></div>
