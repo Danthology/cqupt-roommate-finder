@@ -72,11 +72,10 @@ img { border:none;}
     background-size: 100% 100%;
     display:flex;
     flex-direction: column;
-    justify-content: space-evenly;
     border:0.014rem solid #828282;
 }
 .name ,.num{
-    margin-left:0.8rem;
+    margin:calc((5.33rem - 2*1.06rem - 0.8rem) / 4) 0 0 0.8rem;
     width:7.22rem;
     height:1.06rem;
     border:0.018rem solid #757575;
@@ -105,7 +104,7 @@ img { border:none;}
     overflow:hidden;
     background-image:url("img/search.png");
     position:relative;
-    margin-right:0.8rem;
+    margin:calc((5.33rem - 2*1.06rem - 0.8rem) / 4) 0.8rem calc((5.33rem - 2*1.06rem - 0.8rem) / 4) 0;
     border:0.013rem solid #828282;
     box-shadow: 0.02rem 0.02rem 0.1rem cadetblue;
 }
