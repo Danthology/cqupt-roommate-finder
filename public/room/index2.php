@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>重邮查室友</title>
     <link rel="stylesheet" href="room/search.css">
-    <meta name="description" content="重庆邮电大学2018级本科新生室友查询，给你未来的室友说句话吧~~">
+    <meta name="description" content="给你未来的室友说句话吧~~">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 </head>
