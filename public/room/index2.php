@@ -19,7 +19,7 @@
         <div class="du">
             <div class="head-title">
                 <div class="head-title">
-                    <h6 style="letter-spacing: 3px;color:#fefefe;text-shadow: 0 3px 0 #52C1D9;font-weight: 500;">
+                    <h6 style="letter-spacing: 3px;color:#fefefe;text-shadow: 0 3px 0 #52C1D9;font-weight: bold;">
                         重庆邮电大学学生公寓<br>2018级新生室友查询</h6>
                 </div>
             </div>
