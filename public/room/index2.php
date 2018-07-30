@@ -18,14 +18,19 @@
         </div>
         <div class="du">
             <div class="head-title">
-                <img src="/room/img/title.png">
+                <div class="head-title">
+                    <h6 style="letter-spacing: 6px;color:#fefefe;text-shadow: 0 3px 0 #52C1D9;font-weight: 500;">
+                        重庆邮电大学学生公寓<br>2018级新生室友查询</h6>
+                </div>
             </div>
         </div>
     </div>
     <div id="main">
         <form class="card card-display">
-            <div class="name"><input type="text" placeholder="请输入你的姓名" onfocus="this.placeholder=''" onblur="this.placeholder='请输入你的姓名'" name="name"></div>
-            <div class="num"><input type="text" placeholder="请输入你的学号(10位)" onfocus="this.placeholder=''" onblur="this.placeholder='请输入你的学号(10位)'" name="num"></div>
+            <div class="name"><input type="text" placeholder="请输入你的姓名" onfocus="this.placeholder=''"
+                                     onblur="this.placeholder='请输入你的姓名'" name="name"></div>
+            <div class="num"><input type="text" placeholder="请输入你的学号(10位)" onfocus="this.placeholder=''"
+                                    onblur="this.placeholder='请输入你的学号(10位)'" name="num"></div>
             <div class="card-bottom">
                 <button type="button">查询</button>
             </div>
