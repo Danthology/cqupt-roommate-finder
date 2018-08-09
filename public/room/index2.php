@@ -89,7 +89,7 @@
     <div id="footer">
         <div class="hot-link">
             <div class="link1">
-                <div class="link-p"><p><a href="">猜猜啊</a></p></div>
+                <div class="link-p"><p><a href="https://mp.weixin.qq.com/s/_lkGWe6YI6RajthBIbXKZw">@重邮萌新，你有一个打卡任务待接收</a></p></div>
                 <div class="link-color1">
                     <p>去参加</p>
                 </div>
