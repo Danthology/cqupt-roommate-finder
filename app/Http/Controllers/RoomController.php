@@ -23,7 +23,8 @@ class RoomController extends Controller
 			$ob=DB::table('room')->where('num',$num)->where('name',$name)->first();
 			if($ob)
 			{
-				$room=$ob->room;
+				$room[0]=$ob->room;
+				$room[1]=$ob->qq;
 				//dd($room);
 				Cache::put($num,$room,4320);
 			}
@@ -35,8 +36,8 @@ class RoomController extends Controller
 		//dd($room);
 		if($room)
 		{
-			$json=cache()->remember($room,4320,function() use($room){
-				$names=DB::table('room')->select('name')->where('room',$room)->get();
+			$json=cache()->remember($room[0],4320,function() use($room){
+				$names=DB::table('room')->select('name')->where('room',$room[0])->get();
 				$count=0;
 				foreach($names as $oa)
 				{
@@ -55,7 +56,7 @@ class RoomController extends Controller
 				$dan["status"]=0;
 			}
 			$dan["roommate"]=$json;
-			$find=DB::table('board')->select('name','date','content')->where('room',$room)->get()->toArray();
+			$find=DB::table('board')->select('name','date','content')->where('room',$room[0])->get()->toArray();
 			$count=0;
 			$comment=Array(Array());
 			foreach($find as $ob)
@@ -67,7 +68,8 @@ class RoomController extends Controller
 			}
 			$dan["comment"]=$comment;
 			//dd($dan);
-			$dan["room"]=$room;
+			$dan["room"]=$room[0];
+			$dan["qq"]=$room[1];
 			$dan["count"]=$count;
 			return response()->json($dan);
 		}
