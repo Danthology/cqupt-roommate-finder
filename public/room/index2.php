@@ -44,7 +44,7 @@
                         <span id="she">.舍</span>
                         <span id="hao">...</span>
                     </div>
-                    <div class="result-title-p2" style="float: right;">
+                    <div class="result-title-p2" style="float: right;font-size: 0.36rem">
                         <span>楼栋群:</span>
                         <span id="qq"></span>
                     </div>
