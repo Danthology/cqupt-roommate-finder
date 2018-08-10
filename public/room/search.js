@@ -65,7 +65,7 @@ $(".card-bottom button").click(function () {
                             return 1000;
                         });
                         $('.result-display').show(1000);
-
+                        $('#qq').html(data.qq);
                         let dataObj1 = eval(data.roommate);
                         $.each(dataObj1, function (index, obj) {
                             peopleGen(obj);
