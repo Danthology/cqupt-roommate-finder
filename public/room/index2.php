@@ -99,7 +99,7 @@
                 </div>
             </div>
             <div class="link2">
-                <div class="link-p"><p><a href="">广告位招租</a></p></div>
+                <div class="link-p"><p><a href=""></a></p></div>
                 <div class="link-color2">
                     <p>去参加</p>
                 </div>
