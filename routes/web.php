@@ -24,6 +24,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('roommate',function(){
+	return view('warning');
+});
+Route::get('roomfinder',function(){
 	return view('index');
 });
 Route::group(['prefix'=>'action/info_submit','middleware'=>'throttle:10,1'],function(){
