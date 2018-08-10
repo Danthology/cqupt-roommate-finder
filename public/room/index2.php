@@ -44,7 +44,7 @@
                         <span id="she">.舍</span>
                         <span id="hao">...</span>
                     </div>
-                    <div class="result-title-p2" style="float: right;font-size: 0.36rem">
+                    <div class="result-title-p2" style="float: right;font-size: 0.36rem;letter-spacing: .03rem;">
                         <span>楼栋群:</span>
                         <span id="qq"></span>
                     </div>
@@ -95,11 +95,11 @@
             <div class="link1">
                 <div class="link-p"><p><a href="https://mp.weixin.qq.com/s/_lkGWe6YI6RajthBIbXKZw">@重邮萌新，你有一个打卡任务待接收</a></p></div>
                 <div class="link-color1">
-                    <p>去参加</p>
+                    <p onclick="window.location='https://mp.weixin.qq.com/s/_lkGWe6YI6RajthBIbXKZw'">去参加</p>
                 </div>
             </div>
             <div class="link2">
-                <div class="link-p"><p><a href="">xxxxx</a></p></div>
+                <div class="link-p"><p><a href="">广告位招租</a></p></div>
                 <div class="link-color2">
                     <p>去参加</p>
                 </div>
