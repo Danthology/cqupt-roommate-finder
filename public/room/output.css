@@ -427,5 +427,6 @@ img {
 
 .b-logo img{
     margin: auto;
-    width: 75%;
+    width: 2rem;
+    height: 2rem;
 }

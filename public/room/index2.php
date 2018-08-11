@@ -93,7 +93,7 @@
                 </div>
             </div>
             <div class="link2">
-                <div class="link-p"><p><a href="https://mp.weixin.qq.com/s/UtYMrS24ug4DQqOqtSc1zQ">【笑脸征集】展现青春活力，微笑时光永恒。</a></p></div>
+                <div class="link-p"><p><a href="https://mp.weixin.qq.com/s/UtYMrS24ug4DQqOqtSc1zQ">【笑脸征集】展现青春活力，微笑时光永恒</a></p></div>
                 <div class="link-color1">
                     <p onclick="window.location='https://mp.weixin.qq.com/s/UtYMrS24ug4DQqOqtSc1zQ'">去参加</p>
                 </div>
