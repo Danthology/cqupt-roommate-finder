@@ -101,6 +101,7 @@
         </div>
         <div class="footer-zi">
             <div class="p-right"><p>技术支持：重邮e站</p></div>
+            <div class="p-left"><p>数据来源：重邮宿管会</p></div>
         </div>
 
     </div>
