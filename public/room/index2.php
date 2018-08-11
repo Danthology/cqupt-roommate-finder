@@ -11,18 +11,12 @@
 <body>
 <div id="container">
     <div id="header">
-        <div class="du">
-            <div class="loge">
-                <img src="/room/img/logo.png">
-            </div>
+        <div class="p-logo">
+            <div id="bottom-logo-2" class="b-logo"><img src="room/img/dma_logo.png"></div>
+            <div id="bottom-logo-1" class="b-logo"><img src="room/img/logo.png"></div>
         </div>
-        <div class="du">
-            <div class="head-title">
-                <div class="head-title">
-                    <h6 style="letter-spacing: 3px;color:#fefefe;text-shadow: 0 3px 0 #52C1D9;font-weight: bold;">
-                        重庆邮电大学学生公寓<br>2018级新生室友查询</h6>
-                </div>
-            </div>
+        <div class="head-title">
+            <h6>重庆邮电大学学生公寓<br>2018级新生室友查询</h6>
         </div>
     </div>
     <div id="main">
@@ -106,10 +100,10 @@
             </div>
         </div>
         <div class="footer-zi">
-            <div class="p-left"><p>©本功能由 <span>重邮e站</span> 提供技术支持</p></div>
-            <div class="p-right"><p>合作伙伴：</p></div>
-            <div class="p-img"></div>
+            <div class="p-left"><p>活动主办：重庆邮电大学宿管会</p></div>
+            <div class="p-right"><p>技术支持：重邮e站</p></div>
         </div>
+
     </div>
 </div>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
