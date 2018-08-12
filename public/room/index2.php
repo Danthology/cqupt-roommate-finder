@@ -12,8 +12,14 @@
 <div id="container">
     <div id="header">
         <div class="p-logo">
+
+            <div id="bottom-logo-2" class="b-logo">
+                <div id="logo-block">
+                    <img style="width: 1.5rem;height: 1.5rem" src="room/img/dma_logo.png">
+                    <span style="font-size: .4rem">重邮宿管会</span>
+                </div>
+            </div>
             <div id="bottom-logo-1" class="b-logo"><img src="room/img/logo.png"></div>
-            <div id="bottom-logo-2" class="b-logo"><img src="room/img/dma_logo.png"></div>
         </div>
         <div class="head-title">
             <h6>重庆邮电大学学生公寓<br>2018级新生室友查询</h6>
@@ -100,8 +106,8 @@
             </div>
         </div>
         <div class="footer-zi">
-            <div class="p-left"><p>技术支持：重邮e站</p></div>
-            <div class="p-right"><p>数据来源：重邮宿管会</p></div>
+            <div class="p-left"><p>本系统由重邮e站制作</p></div>
+            <div class="p-right"><p>本功能由重邮宿管会提供</p></div>
         </div>
 
     </div>
